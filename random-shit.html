@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You're learning-- it's all good</title>
+    <link rel="stylesheet" href="bootiful.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top">
+        <h2 class="title">YOU GOT THIS</h2>
+        <p class="description">
+          I know it's fucking hard rn, but you started because you liked it and
+          now you are going to make this yours.
+        </p>
+        <p class="description">- Your past self</p>
+      </div>
+      <div class="bottom">
+        <p class="second-title">
+          Times you wanted to give up but you chose not to counter:
+        </p>
+        <button class="counter-button" onclick="addingTimes() "></button>
+        <p class="second-title">(just click to add 1 time)</p>
+      </div>
+    </div>
+    <script>
+      const totalCount = document.querySelector(".counter-button");
+      let count = JSON.parse(localStorage.getItem("count")) || 0;
+      totalCount.innerHTML = `${count} times`;
+
+      const addingTimes = () => {
+        count++;
+        totalCount.innerHTML = `${count} times`;
+        localStorage.setItem("count", JSON.stringify(count));
+      };
+    </script>
+  </body>
+</html>

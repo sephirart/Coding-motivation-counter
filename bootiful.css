@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap");
+
+:root {
+  --fs-xl: 2rem;
+  --fs-700: 1rem;
+  --fs-300: 0.7rem;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 4.5rem;
+    --fs-700: 1.25rem;
+    --fs-300: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #221f2f;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #d050ec;
+  left: 25%;
+  top: 10%;
+  filter: blur(150px);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #546de8;
+  left: 70%;
+  top: 60%;
+  filter: blur(150px);
+}
+
+.main-container {
+  margin-top: 7%;
+  margin-left: 30%;
+  margin-right: 30%;
+  min-width: 25em;
+  padding: 3rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top,
+.bottom {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: var(--fs-xl);
+  margin-bottom: 0.2em;
+}
+.description {
+  font-size: var(--fs-300);
+  margin-bottom: 0.5em;
+}
+
+.second-title {
+  font-size: var(--fs-700);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.counter-button {
+  font-size: var(--fs-700);
+  font-weight: 700;
+  color: #221f2f;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.counter-button:hover {
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 30px;
+  padding: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: white;
+}
